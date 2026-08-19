@@ -44,11 +44,11 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # Gmail account
-EMAIL = "databeli13@gmail.com"
+EMAIL = "youremail@gmail.com"
 APP_PASSWORD = gmail_api_key
 
 # Receiver
-to_email = "alerts@example.com"
+to_email = "youremail@gmail.com"
 
 # Create message
 msg = MIMEMultipart()
