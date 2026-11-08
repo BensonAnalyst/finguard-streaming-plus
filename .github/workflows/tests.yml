@@ -16,5 +16,5 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
-      - run: pip install pyspark pytest numpy "pandas<3"
+      - run: pip install pyspark pytest numpy "pandas<3" xgboost scikit-learn matplotlib
       - run: pytest -q tests/

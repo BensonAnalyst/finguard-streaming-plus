@@ -1,0 +1,99 @@
+{
+  "data": {
+    "transactions": 218060,
+    "fraud_rate": 0.00817,
+    "test_transactions": 62129,
+    "test_fraud": 395,
+    "split": "time-based: fit 16d / validation 4d / test 8d (scaled to config days)",
+    "note": "Synthetic SG/MY portfolio from ml/simulate.py, not real bank data."
+  },
+  "ranking": {
+    "rules_pr_auc": 0.0584,
+    "model_pr_auc": 0.828,
+    "rules_roc_auc": 0.8576,
+    "model_roc_auc": 0.945
+  },
+  "operating_points": {
+    "rules_as_designed_ge50": {
+      "threshold": 50.0,
+      "alerts": 2330,
+      "alerts_per_10k_txns": 375.0,
+      "fraud_caught": 127,
+      "fraud_total": 395,
+      "recall": 0.3215,
+      "precision": 0.0545,
+      "false_positive_rate": 0.03569,
+      "fraud_value_caught_pct": 0.4756,
+      "analyst_hours": 194.2
+    },
+    "rules_tuned": {
+      "threshold": 60.0,
+      "alerts": 1257,
+      "alerts_per_10k_txns": 202.3,
+      "fraud_caught": 126,
+      "fraud_total": 395,
+      "recall": 0.319,
+      "precision": 0.1002,
+      "false_positive_rate": 0.01832,
+      "fraud_value_caught_pct": 0.4653,
+      "analyst_hours": 104.8
+    },
+    "xgboost_same_alert_budget": {
+      "threshold": 0.1636,
+      "alerts": 1284,
+      "alerts_per_10k_txns": 206.7,
+      "fraud_caught": 336,
+      "fraud_total": 395,
+      "recall": 0.8506,
+      "precision": 0.2617,
+      "false_positive_rate": 0.01536,
+      "fraud_value_caught_pct": 0.9078,
+      "analyst_hours": 107.0
+    },
+    "xgboost_best_f1": {
+      "threshold": 0.6908,
+      "alerts": 333,
+      "alerts_per_10k_txns": 53.6,
+      "fraud_caught": 310,
+      "fraud_total": 395,
+      "recall": 0.7848,
+      "precision": 0.9309,
+      "false_positive_rate": 0.00037,
+      "fraud_value_caught_pct": 0.8604,
+      "analyst_hours": 27.8
+    }
+  },
+  "minutes_per_alert_assumption": 5,
+  "recall_by_scenario": {
+    "ACCOUNT_TAKEOVER": {
+      "n": 56,
+      "rules_tuned": 0.232,
+      "xgboost": 0.946
+    },
+    "CARD_CLONE": {
+      "n": 38,
+      "rules_tuned": 0.105,
+      "xgboost": 1.0
+    },
+    "CARD_TESTING": {
+      "n": 228,
+      "rules_tuned": 0.469,
+      "xgboost": 1.0
+    },
+    "LOW_AND_SLOW": {
+      "n": 73,
+      "rules_tuned": 0.027,
+      "xgboost": 0.233
+    }
+  },
+  "top_features_by_gain": [
+    "new_device",
+    "n_prev_1h",
+    "km_from_home",
+    "category",
+    "device_first_use",
+    "merchant_risk_level",
+    "hour_vs_peak",
+    "secs_since_prev"
+  ]
+}
