@@ -1,5 +1,5 @@
 # FinGuard Streaming+ — Real-Time Card Fraud & Transaction Monitoring
-
+![tests](https://github.com/BensonAnalyst/finguard-streaming-plus/actions/workflows/tests.yml/badge.svg)
 Streaming fraud detection on **Kafka → Databricks (Lakeflow Declarative Pipelines) → Delta → Dashboard + email alerts**, extended with **Statistical Process Control (SPC)** to catch *pattern-level* anomalies that per-transaction rules miss.
 
 > **Credit:** Built on top of [databeli/finguard_streaming_project](https://github.com/databeli/finguard_streaming_project) by Narender Kumar (Kafka producer, bronze/silver ingestion, rule-based alerts, Lakeview dashboard).
