@@ -1,4 +1,4 @@
-# FinGuard+ — Real-Time Card Fraud & Transaction Monitoring
+# FinGuard Streaming+ — Real-Time Card Fraud & Transaction Monitoring
 
 Streaming fraud detection on **Kafka → Databricks (Lakeflow Declarative Pipelines) → Delta → Dashboard + email alerts**, extended with **Statistical Process Control (SPC)** to catch *pattern-level* anomalies that per-transaction rules miss.
 
