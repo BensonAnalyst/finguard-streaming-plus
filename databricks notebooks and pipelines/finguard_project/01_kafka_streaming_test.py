@@ -1,8 +1,5 @@
 # Databricks notebook source
-# bootstrap_servers='***REMOVED***:9092'
-# api_key='***REMOVED***'
-# api_secret='***REMOVED***'
-# topic='credit_card_transactions'
+# Kafka credentials are read from the Databricks secret scope below — never hard-code them.
 
 # COMMAND ----------
 
